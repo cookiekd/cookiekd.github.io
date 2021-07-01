@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta property="og:title"              content="쿠키런킹덤GG" />
+    <meta property="og:description"        content="쿠키런 탐험 티어 정보" />
+    <meta property="og:image"              content="plugins/images/assets/og-ko.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>CookieGG</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/megna-dark.css" id="theme" rel="stylesheet">
+    <link href="../plugins/bower_components/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-D51XN47FF5"></script>
+	<!--<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-D51XN47FF5');
+	</script>-->
+    <style>
+        @media (max-width: 767px){
+            .container-fluid{
+                    padding-left: 7px;
+                    padding-right: 7px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="fix-header">
+    <!-- ============================================================== -->
+    <!-- Preloader -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+        <!-- ============================================================== -->
+        <!-- Navbar 시작
+        <!-- ============================================================== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <div class="top-left-part">
+                </div>
+                <!-- /Logo -->
+                <!-- Search input and Toggle icon -->
+                <ul class="nav navbar-top-links navbar-left">
+                    <li><a href="javascript:void(0)" class="open-close waves-effect waves-light"><i class="ti-menu"></i></a></li>
+                    <!-- .Task dropdown -->
+                </ul>
+
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- ============================================================== -->
+        <!-- Navbar 끝
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- 사이드바 시작
+        <!-- ============================================================== -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3> </div>
+                <ul class="nav" id="side-menu">
+                    <li> <a href="index.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠폰 정보</span></a> </li>
+                    <li> <a href="tier1.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠키 티어</span></a> </li>
+                    <li> <a href="tier2.html" class="waves-effect active"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠키 정보</span></a> </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- 사이드바 끝
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page Content -->
+        <!-- ============================================================== -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h2 class="page-title">쿠키 티어</h2> </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- Demo table -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-heading">Last Update 2021.07.01</div>
+                            <div class="panel-heading">티어는 각종 정보를 취합한 주관적 티어입니다.</div>
+                            <div class="panel-heading">표시되지 않은 쿠키는 업데이트 예정입니다.</div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">바다요정 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">B</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 공격력 // 공격력+초콜릿칩(쿨감 11.8%)</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">퓨어바닐라 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">C</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 쿨감</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">다크초코 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">B</td>
+                                        <td class="text-center">A</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 피해감소</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">감초맛 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 쿨감</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">페스츄리 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">B</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">C</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 공격력</p>
+                                <p>추천덱 : 공속덱</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">블랙레이즌 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">A</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 공격력</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">아몬드 쿠키</div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">탐험</th>
+                                        <th class="text-center">아레나</th>
+                                        <th class="text-center">길드</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center">C</td>
+                                        <td class="text-center">A</td>
+                                        <td class="text-center">C</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <p>추천 토핑 : 피해감소</p>
+                                <p>추천아레나덱 : 호몬드덱</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray" class="yellow-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                                <li><b>With Dark sidebar</b></li>
+                                <br/>
+                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-theme="gray-dark" class="yellow-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme working">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 all-demos">
+                                <li><b>Choose other demos</b></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/genu.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/arijit.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/govinda.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/hritik.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/john.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="plugins/images/users/pawandeep.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2021 madeBy DESH </footer>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <!-- jQuery peity -->
+    <script src="plugins/bower_components/peity/jquery.peity.min.js"></script>
+    <script src="plugins/bower_components/peity/jquery.peity.init.js"></script>
+    <!--Style Switcher -->
+    <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/bower_components/datatables/datatables.min.js"></script>
+
+        <script>
+       $(function() {
+       $(document).ready(function() {
+            $('#myTable').DataTable( {
+                "order": [[ 2, "asc" ]],
+                "displayLength": 25,
+                dom: 'Bfrtip'
+            }
+             );
+        } );
+    });
+        </script>
+</body>
+
+</html>
