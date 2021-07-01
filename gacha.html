@@ -94,8 +94,8 @@
                 <ul class="nav" id="side-menu">
                     <li> <a href="index.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠폰 정보</span></a> </li>
                     <li> <a href="tier1.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠키 티어</span></a> </li>
-                    <li> <a href="tier2.html" class="waves-effect active"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠키 정보</span></a> </li>
-                    <li> <a href="gacha.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">기댓값 계산기</span></a> </li>
+                    <li> <a href="tier2.html" class="waves-effect"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">쿠키 정보</span></a> </li>
+                    <li> <a href="gacha.html" class="waves-effect active"><i  class="mdi mdi-settings fa-fw"></i> <span class="hide-menu">기댓값 계산기</span></a> </li>
                 </ul>
             </div>
         </div>
@@ -112,189 +112,43 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h2 class="page-title">쿠키 티어</h2> </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- ============================================================== -->
                 <!-- Demo table -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel">
-                            <div class="panel-heading">Last Update 2021.07.01</div>
-                            <div class="panel-heading">티어는 각종 정보를 취합한 주관적 티어입니다.</div>
-                            <div class="panel-heading">표시되지 않은 쿠키는 업데이트 예정입니다.</div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">바다요정 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">B</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                    <div class="white-box">
+                        <center>
+                            <h3 class="box-title m-b-0">쿠키뽑기 기댓값 계산기</h3>
+                        </center>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="iptHave">보유 영혼석 개수</label>
+                                    <input type="text" class="form-control" id="iptHave" placeholder="현재 보유 영혼석 수">
+                                </div>
                             </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 공격력 // 공격력+초콜릿칩(쿨감 11.8%)</p>
+                            <div class="form-group">
+                                <label for="selectGoal">목표 쿠키 성</label>
+                                <select class="form-control" id="selectGoal">
+                                    <option value="20">1성</option>
+                                    <option value="50">2성</option>
+                                    <option value="100">3성</option>
+                                    <option value="170">4성</option>
+                                    <option value="270">5성</option>
+                                </select>
                             </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">퓨어바닐라 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">C</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="form-group">
+                                <label for="selectGrade">쿠키 등급</label>
+                                <select class="form-control" id="selectGrade">
+                                    <option value="32.262">COMMON</option>
+                                    <option value="9.961">RARE</option>
+                                    <option value="2.831">EPIC</option>
+                                    <option value="1.388">ANCIENT</option>
+                                    <option value="1.388">LEGENDARY</option>
+                                </select>
                             </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 쿨감</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">다크초코 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">B</td>
-                                        <td class="text-center">A</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 피해감소</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">감초맛 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 쿨감</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">페스츄리 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">B</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">C</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 공격력</p>
-                                <p>추천덱 : 공속덱</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">블랙레이즌 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">A</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 공격력</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">아몬드 쿠키</div>
-                            <div class="panel-wrapper collapse in">
-                                <table class="table table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">탐험</th>
-                                        <th class="text-center">아레나</th>
-                                        <th class="text-center">길드</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td class="text-center">C</td>
-                                        <td class="text-center">A</td>
-                                        <td class="text-center">C</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="panel-footer">
-                                <p>추천 토핑 : 피해감소</p>
-                                <p>추천아레나덱 : 호몬드덱</p>
-                            </div>
-                        </div>
+                            <button class="btn btn-block btn-danger btn-lg btn-rounded" onclick="cal();">계산</button>
                     </div>
 
                     </div>
@@ -391,16 +245,34 @@
         <script src="plugins/bower_components/datatables/datatables.min.js"></script>
 
         <script>
-       $(function() {
-       $(document).ready(function() {
-            $('#myTable').DataTable( {
-                "order": [[ 2, "asc" ]],
-                "displayLength": 25,
-                dom: 'Bfrtip'
+       function cal(){
+            var domSelectGrade = document.getElementById("selectGrade");
+            var grade = domSelectGrade.options[domSelectGrade.selectedIndex].value;
+            if(!grade){
+                swal("등급을 선택해주세요");
+                return false;
             }
-             );
-        } );
-    });
+            var domSelectGoal = document.getElementById("selectGoal");
+            var goal = domSelectGoal.options[domSelectGoal.selectedIndex].value;
+
+            if(!goal){
+                swal("목표를 선택해주세요");
+                return false;
+            }
+            var domIptHave = document.getElementById("iptHave");
+            var iptHave = domIptHave.value;
+            if(!iptHave){
+                swal("현재 보유 영혼석 개수를 입력해주세요");
+                return false;
+            }
+
+            var need = goal - iptHave;
+            if(need <= 0){
+                swal("보유 영혼석 수가 더 많습니다");
+            }else{
+                swal("약 "+(Math.floor(((goal /Number(grade))*300)*100)).toLocaleString('ko-KR')+" 다이아가 필요합니다");
+            }
+       }
         </script>
 </body>
 
