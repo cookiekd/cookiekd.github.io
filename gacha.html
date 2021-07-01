@@ -270,7 +270,7 @@
             if(need <= 0){
                 swal("보유 영혼석 수가 더 많습니다");
             }else{
-                swal("약 "+(Math.floor(((goal /Number(grade))*300)*100)).toLocaleString('ko-KR')+" 다이아가 필요합니다");
+                swal("약 "+(Math.floor((((goal-iptHave) /Number(grade))*300)*100)).toLocaleString('ko-KR')+" 다이아가 필요합니다");
             }
        }
         </script>
