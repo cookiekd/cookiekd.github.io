@@ -88,7 +88,16 @@ food: Pizza
                                             </thead>
                                             <tbody>
                                             {% for treasure in site.data.treasures %}
+
+                                            {% if treasure.tier == "A" %}
+                                            <tr class="success">
+                                                {% elsif treasure.tier == "B" %}
+                                            <tr class="info">
+                                                {% elsif treasure.tier == "C" %}
+                                            <tr class="warning">
+                                                {% else %}
                                             <tr>
+                                            {% endif %}
                                                 <td><img src="plugins/images/treasure/{{treasure.img}}.jpg" width="50" height="50" onerror="this.style.display='none'"></td>
                                                 <td>{{treasure.name}}</td>
                                                 <td>{{treasure.tier}}</td>
