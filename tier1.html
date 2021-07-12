@@ -88,11 +88,23 @@ food: Pizza
                                             <tr>
                                             {% endif %}
                                                 <td style="background-color: white;"><img src="plugins/images/cookies/{{cookie.img}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
-                                                <td>{{cookie.name}}</td>
-                                                <td>{{cookie.tier}}</td>
-                                                <td>{{cookie.adventure}}</td>
-                                                <td>{{cookie.arena}}</td>
-                                                <td>{{cookie.guild}}</td>
+                                                <td>
+                                                    <strong>{{cookie.name}}</strong>
+                                                    <br>
+                                                    <span class="text-muted">{{cookie.etc}}</span>
+                                                </td>
+                                                <td>
+                                                    {{cookie.tier}}
+                                                </td>
+                                                <td>
+                                                    {{cookie.adventure}}
+                                                </td>
+                                                <td>
+                                                    {{cookie.arena}}
+                                                </td>
+                                                <td>
+                                                    {{cookie.guild}}
+                                                </td>
                                             </tr>
                                             {% endfor %}
                                             </tbody>
