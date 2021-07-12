@@ -6,6 +6,11 @@ food: Pizza
 
 <head>
     {% include head.html %}
+    <style>
+        td {
+            vertical-align : middle !important;
+        }
+    </style>
 </head>
 
 <body class="fix-header">
@@ -81,7 +86,7 @@ food: Pizza
                                                 {% else %}
                                             <tr>
                                             {% endif %}
-                                                <td><img src="plugins/images/treasure/{{treasure.img}}.jpg" width="50" height="50" onerror="this.style.display='none'"></td>
+                                                <td ><img src="plugins/images/treasure/{{treasure.img}}.jpg" width="50" height="50" onerror="this.style.display='none'"></td>
                                                 <td>{{treasure.name}}</td>
                                                 <td>{{treasure.tier}}</td>
                                                 <td>{{treasure.adventure}}</td>
