@@ -1,6 +1,6 @@
 ﻿a,name,tier,adventure,adco,arena,arenaco,guild,guildco,etc,img
 a,퓨어바닐라,A,10,,10,,5,"저레벨 유용","퓨없찐",puva
-a,바다요정,A,10,,10,,6,,"바없찐",bayo
+a,바다요정,A,10,,10,,5,,"바없찐",bayo
 a,감초맛,B,10,,7,,10,,,gamcho
 a,다크초코,B,10,,8,,10,,,dark
 a,뱀파이어,B,8,보스잡이,5,,10,,,vam
@@ -8,10 +8,10 @@ a,딸기크레페,A,8,,10,,7,,"0티어 탱커",Strawberry
 a,블랙레이즌,B,8,,9,,8,,,Black
 a,페스츄리,B,8,,7,,2,,공속덱,Pastry
 a,허브맛,C,8,,6,,2,,"퓨바 대체제",Herb
-a,정글전사맛,C,8,,8,,2,,,Tiger
+a,정글전사맛,C,8,,8,,6,,,Tiger
 a,호밀맛,C,7,,8,,9,,,Rye
-a,라떼맛,C,7,,6,,6,,,Latte
-a,에스프레소,C,7,,6,,6,,,Espresso
+a,라떼맛,C,7,,6,,5,,,Latte
+a,에스프레소,C,7,,6,,5,,,Espresso
 a,아몬드맛,C,6,,8,,2,,,Almond
 a,마들렌맛,C,6,,8,,2,,"인연작,공속덱",Madeleine
 a,석류맛,D,6,,3,,6,,,Pomegranate
