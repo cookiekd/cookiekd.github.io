@@ -78,22 +78,20 @@ food: Pizza
 
                                             {% for cookie in site.data.cookies %}
 
-                                            {% if cookie.tier == "A" %}
-                                            <tr class="success">
-                                                {% elsif cookie.tier == "B" %}
-                                            <tr class="info">
-                                                {% elsif cookie.tier == "C" %}
-                                            <tr class="warning">
-                                                {% else %}
                                             <tr>
-                                            {% endif %}
-                                                <td style="background-color: white;"><img src="plugins/images/cookies/{{cookie.img}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                                <td class="text-center" style="background-color: #{{cookie.color}};"><img src="plugins/images/cookies2/{{cookie.img}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
                                                 <td>
                                                     <strong>{{cookie.name}}</strong>
-                                                    <br>
-                                                    <span class="text-muted">{{cookie.etc}}</span>
                                                 </td>
+                                                {% if cookie.tier == "A" %}
+                                                <td class="success">
+                                                    {% elsif cookie.tier == "B" %}
+                                                <td class="info">
+                                                    {% elsif cookie.tier == "C" %}
+                                                <td class="warning">
+                                                    {% else %}
                                                 <td>
+                                                {% endif %}
                                                     {{cookie.tier}}
                                                 </td>
                                                 <td>
@@ -105,7 +103,7 @@ food: Pizza
                                                 <td>
                                                     {{cookie.guild}}
                                                 </td>
-                                            </tr>
+                                            </td>
                                             {% endfor %}
                                             </tbody>
                                         </table>
