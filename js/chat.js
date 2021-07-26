@@ -1,49 +1,57 @@
-/*jslint browser: true*/
-/*global $, jQuery, alert*/
+        <script>
+        var cookiePerList = [];
+        var cookieList =[];
 
-$(document).ready(function () {
 
-    "use strict";
-
-    $('.chat-left-inner > .chatonline').slimScroll({
-        height: '100%',
-        position: 'right',
-        size: "0px",
-        color: '#dcdcdc'
-
-    });
-    $(function () {
-        $(window).on("load", function () { // On load
-            $('.chat-list').css({
-                'height': (($(window).height()) - 470) + 'px'
-            });
+       $(document).ready(function() {
+           {% for cookie in site.data.cookies2 %}
+              cookiePerList[{{cookie.nameForJs}}] = {{cookie.per1}};
+           {% endfor %}
+           {% for cookie in site.data.cookies3 %}
+              cookieList[{{cookie.nameForJs}}] = "x";
+           {% endfor %}
         });
-        $(window).on("resize", function () { // On resize
-            $('.chat-list').css({
-                'height': (($(window).height()) - 470) + 'px'
-            });
-        });
-    });
-
-    // this is for the left-aside-fix in content area with scroll
-
-    $(function () {
-        $(window).on("load", function () { // On load
-            $('.chat-left-inner').css({
-                'height': (($(window).height()) - 240) + 'px'
-            });
-        });
-        $(window).on("resize", function () { // On resize
-            $('.chat-left-inner').css({
-                'height': (($(window).height()) - 240) + 'px'
-            });
-        });
-    });
 
 
-    $(".open-panel").on("click", function () {
-        $(".chat-left-aside").toggleClass("open-pnl");
-        $(".open-panel i").toggleClass("ti-angle-left");
-    });
+        function bbob(){
+            var docDivBbob = document.getElementById("divBbob");
+            var docCookie;
+            //뽑기창 초기화
+            docDivBbob.innerHTML ='';
+            for(x = 0 ; x < 10 ; x++){
+                var pickItem = getRandWeight();
+                console.log(pickItem);
+                if(pickItem.includes( '영혼석' )){
+                    var pickCookie = pickItem.substring(0,pickItem.length-4);
+                    var plus = Math.floor(Math.random() * 3 + 1);
+                    var docCookie = document.getElementById(pickCookie);
+                }else{
+                    var docCookie = document.getElementById(pickItem);
+                    var plus=20;
+                }
+                docCookie.innerHTML = Number(docCookie.innerHTML)+plus;
+                docDivBbob.appendChild(docCookie);
+            }
+        }
 
-});
+
+        function getRandRange(min,max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function calStar(){
+
+        }
+
+        function getRandWeight(){
+            var pickVal = Number.MAX_VALUE;
+             var pickItem = null;
+              for(var item in cookiePerList){
+                var tmpVal = -Math.log(Math.random()) / cookiePerList[item];
+                 if(tmpVal < pickVal){
+                  pickVal = tmpVal;
+                   pickItem = item;
+                        }
+                     }
+              return pickItem;
+              }

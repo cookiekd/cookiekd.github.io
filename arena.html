@@ -6,6 +6,11 @@ food: Pizza
 
 <head>
     {% include head.html %}
+    <style>
+        td {
+            vertical-align : middle !important;
+        }
+    </style>
 </head>
 
 <body class="fix-header">
@@ -45,8 +50,7 @@ food: Pizza
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h2 class="page-title">쿠키런 킹덤 쿠폰 정보</h2> </div>
-                    {% include head.html %}
+                        <h2 class="page-title">아레나 티어 덱</h2> </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- ============================================================== -->
@@ -57,61 +61,59 @@ food: Pizza
                         <div class="panel">
                             <div class="panel-heading">Last Update 2021.07.15</div>
                         </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>BESTGAMEAWARDTHX</p>
-                                    <p>3000크리스탈</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
+
+                        {% for arena in site.data.arenas %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h3>{{arena.name}}</h3></div>
+                            <div class="panel-wrapper collapse in">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">#</th>
+                                        <th>쿠키</th>
+                                        <th>토핑</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center" style="background-color: #{{arena.color1}};"><img src="plugins/images/cookies2/{{arena.img1}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                        <td>{{arena.cookie1}}</td>
+                                        <td>{{arena.toping1}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color: #{{arena.color2}};"><img src="plugins/images/cookies2/{{arena.img2}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                        <td>{{arena.cookie2}}</td>
+                                        <td>{{arena.toping2}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color: #{{arena.color3}};"><img src="plugins/images/cookies2/{{arena.img3}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                        <td>{{arena.cookie3}}</td>
+                                        <td>{{arena.toping3}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color: #{{arena.color4}};"><img src="plugins/images/cookies2/{{arena.img4}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                        <td>{{arena.cookie4}}</td>
+                                        <td>{{arena.toping4}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" style="background-color: #{{arena.color5}};"><img src="plugins/images/cookies2/{{arena.img5}}.png" width="50" height="50" onerror="this.style.display='none'"></td>
+                                        <td>{{arena.cookie5}}</td>
+                                        <td>{{arena.toping5}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <h4>보물</h4>
+                                <img src="plugins/images/treasure/{{arena.bo1}}.jpg" width="50" height="50" onerror="this.style.display='none'">
+                                <img src="plugins/images/treasure/{{arena.bo2}}.jpg" width="50" height="50" onerror="this.style.display='none'">
+                                <img src="plugins/images/treasure/{{arena.bo12}}.jpg" width="50" height="50" onerror="this.style.display='none'">
                             </div>
                         </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR1SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR3SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR5SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR7SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
 
 
 
@@ -201,22 +203,20 @@ food: Pizza
     <!--Style Switcher -->
     <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
     <script src="plugins/bower_components/sweetalert/sweetalert.min.js"></script>
-    <script>
-        function copy(a){
-            var tempElem = document.createElement('textarea');
-            var code = a.parentNode.parentNode.childNodes[1].childNodes[1].innerText;
-              tempElem.value = code;
-              document.body.appendChild(tempElem);
+        <script src="plugins/bower_components/datatables/datatables.min.js"></script>
 
-              tempElem.select();
-              document.execCommand("copy");
-              document.body.removeChild(tempElem);
-              swal.fire({
-                title:code+"<br>복사되었습니다."
-              });
-        }
-
-    </script>
+        <script>
+       $(function() {
+       $(document).ready(function() {
+            $('#myTable').DataTable( {
+                "order": [[ 2, "asc" ]],
+                "displayLength": 25,
+                dom: 'Bfrtip'
+            }
+             );
+        } );
+    });
+        </script>
 </body>
 
 </html>

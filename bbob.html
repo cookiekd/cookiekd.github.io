@@ -6,6 +6,11 @@ food: Pizza
 
 <head>
     {% include head.html %}
+    <style>
+        td {
+            vertical-align : middle !important;
+        }
+    </style>
 </head>
 
 <body class="fix-header">
@@ -45,8 +50,7 @@ food: Pizza
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h2 class="page-title">쿠키런 킹덤 쿠폰 정보</h2> </div>
-                    {% include head.html %}
+                        <h2 class="page-title">쿠키 뽑기 시뮬레이터</h2> </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- ============================================================== -->
@@ -55,63 +59,60 @@ food: Pizza
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel">
-                            <div class="panel-heading">Last Update 2021.07.15</div>
+                            <div class="panel-heading">
+                                <button onclick="bbob();">10회 뽑기</button>
+                                <span id="crystal">0</span><span>크리스탈 소모</span>
+                            </div>
                         </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>BESTGAMEAWARDTHX</p>
-                                    <p>3000크리스탈</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="white-box">
+                                <div class="row show-grid" id="divBbob">
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR1SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="white-box">
+                                <div class="row show-grid" id="main">
+                                    {% for cookie in site.data.cookiesForBbob %}
+                                    <div class="col-sm-2 col-xs-4" style="background-color: #{{cookie.color}}; height: 200px;">
+                                        <div>
+                                            <div class="el-card-item text-center" >
+                                                <div class="el-card-avatar el-overlay-1"> <img src="plugins/images/cookies2/{{cookie.img}}.png" class="img-responsive" alt="{{cookie.name}}">
+                                                </div>
+                                                <div class="el-card-content">
+                                                    <p>{{cookie.nameForHtml}}</p>
+                                                    <p class="clsStar"></p>
+                                                    <div class="progress progress-lg text-center">
+                                                        <div class="progress-bar progress-bar-success clsPgbar" style="width: 0%;" role="progressbar" id="{{cookie.nameForHtml}}">0</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
                                 </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
+                                    {% for cookie in site.data.cookiesForBbob %}
+                                    <div class="col-sm-2 col-xs-4 invisible" style="background-color: #{{cookie.color}}; height: 200px;" id="div{{cookie.nameForHtml}}">
+                                        <div>
+                                            <div class="el-card-item text-center" >
+                                                <div class="el-card-avatar el-overlay-1"> <img src="plugins/images/cookies2/{{cookie.img}}.png" class="img-responsive" alt="{{cookie.name}}">
+                                                </div>
+                                                <div class="el-card-content">
+                                                    <p>{{cookie.nameForHtml}}</p>
+                                                    <input type="number" id="ipt{{cookie.nameForHtml}}" value="0" class="form-control text-center" disabled/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
                             </div>
                         </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR3SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR5SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-info block4">
-                            <div class="panel-wrapper collapse in" aria-expanded="true">
-                                <div class="panel-body text-center">
-                                    <p>GETUR7SUGARGNOME</p>
-                                    <p>아마도 재배노움</p>
-                                </div>
-                                <div class="panel-footer text-center">
-                                    <button class="btn btn-info" onclick="copy(this);">쿠폰 복사</button>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
 
 
 
@@ -200,23 +201,98 @@ food: Pizza
     <script src="plugins/bower_components/peity/jquery.peity.init.js"></script>
     <!--Style Switcher -->
     <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
-    <script src="plugins/bower_components/sweetalert/sweetalert.min.js"></script>
-    <script>
-        function copy(a){
-            var tempElem = document.createElement('textarea');
-            var code = a.parentNode.parentNode.childNodes[1].childNodes[1].innerText;
-              tempElem.value = code;
-              document.body.appendChild(tempElem);
+        <script src="plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+        <script>
+        var cookiePerList = [];
+        var cookieList =[];
+        var plag="N";
 
-              tempElem.select();
-              document.execCommand("copy");
-              document.body.removeChild(tempElem);
-              swal.fire({
-                title:code+"<br>복사되었습니다."
-              });
+
+       $(document).ready(function() {
+           {% for cookie in site.data.cookiesPercentage %}
+              cookiePerList[{{cookie.nameForJs}}] = {{cookie.per1}};
+           {% endfor %}
+           {% for cookie in site.data.cookiesForBbob %}
+              cookieList[{{cookie.nameForJs}}] = "x";
+           {% endfor %}
+        });
+
+
+        function bbob(){
+            $("#crystal").text(Number($("#crystal").text())+3000);
+            //뽑기 초기화
+            var docDivBbob = document.getElementById("divBbob");
+            while ( docDivBbob.hasChildNodes() ) {
+                docDivBbob.removeChild( docDivBbob.firstChild );
+             }
+
+                        //뽑기 시작
+            for(x = 0 ; x < 10 ; x++){
+                        var pickItem = getRandWeight();
+                        if(pickItem.includes( '영혼석' )){
+                            var pickCookie = pickItem.substring(0,pickItem.length-4);
+                            var plus = Math.floor(Math.random() * 3 + 1);
+                            var docCookieCount = document.getElementById(pickCookie);
+                            var docCookie = document.getElementById("div"+pickCookie).cloneNode(true);
+                        }else{
+                            var docCookieCount = document.getElementById(pickItem);
+                            var docCookie = document.getElementById("div"+pickItem).cloneNode(true);
+                            var plus=20;
+                        }
+                        //뽑기 내역 element 그리기
+                        docCookie.classList.remove("invisible");
+                        docCookie.childNodes[1].childNodes[1].childNodes[3].childNodes[3].value=plus;
+                        //전체에 보유 영혼석 추가
+                        docCookieCount.innerHTML = Number(docCookieCount.innerHTML)+plus;
+                        docDivBbob.appendChild(docCookie);
+            }
+            calStar();
         }
 
-    </script>
+
+        function getRandRange(min,max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function calStar(){
+            $( ".clsPgbar" ).each(function( index ) {
+                var starCheck = $( this ).text();
+                var per = ((starCheck/270)*100);
+                if(per>100){
+                    per=100;
+                }
+               $(this).width( per + "%") ;
+
+               if(starCheck<20){
+               }else if(starCheck>=20 && starCheck<50){
+                    $(this).parent().prev().text("1성");
+               }else if(starCheck>=50 && starCheck<100){
+                    $(this).parent().prev().text("2성");
+               }else if(starCheck>=100 && starCheck<170){
+                    $(this).parent().prev().text("3성");
+               }else if(starCheck>=170 && starCheck<270){
+                    $(this).parent().prev().text("4성");
+               }else{
+                    $(this).parent().prev().text("5성");
+               }
+            });
+        }
+
+        function getRandWeight(){
+            var pickVal = Number.MAX_VALUE;
+             var pickItem = null;
+              for(var item in cookiePerList){
+                var tmpVal = -Math.log(Math.random()) / cookiePerList[item];
+                 if(tmpVal < pickVal){
+                  pickVal = tmpVal;
+                   pickItem = item;
+                        }
+                     }
+              return pickItem;
+              }
+        </script>
+        <script src="plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/bower_components/datatables/datatables.min.js"></script>
 </body>
 
 </html>
