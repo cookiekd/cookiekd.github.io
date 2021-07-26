@@ -68,6 +68,7 @@ food: Pizza
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="white-box">
+                                <h3>뽑은 쿠키</h3>
                                 <div class="row show-grid" id="divBbob">
                                 </div>
                             </div>
@@ -78,6 +79,7 @@ food: Pizza
                         <div class="col-lg-12">
                             <div class="white-box">
                                 <div class="row show-grid" id="main">
+                                    <h3>보유 쿠키</h3>
                                     {% for cookie in site.data.cookiesForBbob %}
                                     <div class="col-sm-2 col-xs-4" style="background-color: #{{cookie.color}}; height: 200px;">
                                         <div>
