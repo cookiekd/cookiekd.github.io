@@ -64,7 +64,7 @@ food: Pizza
                         <div class="panel">
                             <div class="panel-heading">
                                 <button onclick="bbob();">10회 뽑기</button>
-                                <span id="crystal">0</span><span>크리스탈 소모</span>
+                                <span id="crystal">0</span><span>크리스탈 소모</span><span>( 약 </span><span id="money">0</span><span> 원 )</span>
                             </div>
                         </div>
                     </div>
@@ -225,6 +225,7 @@ food: Pizza
 
         function bbob(){
             $("#crystal").text(Number($("#crystal").text())+3000);
+            $("#money").text(Number($("#money").text())+36000);
             //뽑기 초기화
             var docDivBbob = document.getElementById("divBbob");
             while ( docDivBbob.hasChildNodes() ) {
