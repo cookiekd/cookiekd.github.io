@@ -72,7 +72,7 @@ food: Pizza
                         <div class="panel">
                             <div class="panel-heading">
                                 <button onclick="bbob();">10회 뽑기</button>
-                                <span id="crystal">0</span><span>크리스탈 소모</span><span>( 약 </span><span id="money">0</span><span> 원 )</span>
+                                <img src="plugins/images/sehwanImg/cristal.png" class="img-responsive dpInline" alt="{{cookie.name}}" style="width:30px;"><span id="crystal">0</span><span>( 약 </span><span id="money">0</span><span> 원 )</span>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ food: Pizza
                                                 </div>
                                                 <div class="el-card-content">
                                                     <p>{{cookie.nameForHtml}}</p>
-                                                    <p class="clsStar"></p>
+                                                    <p class="clsStar">0성</p>
                                                     <div class="progress progress-lg text-center">
                                                         <div class="progress-bar progress-bar-success clsPgbar" style="width: 0%;" role="progressbar" id="{{cookie.nameForHtml}}">0</div>
                                                     </div>
@@ -117,7 +117,7 @@ food: Pizza
                                                 </div>
                                                 <div class="el-card-content">
                                                     <p>{{cookie.nameForHtml}}</p>
-                                                    <input type="number" id="ipt{{cookie.nameForHtml}}" value="0" class="form-control text-center" disabled/>
+                                                    <input type="text" id="ipt{{cookie.nameForHtml}}" value="0" class="form-control text-center" disabled style="background-color:transparent; border:none;"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,11 +230,16 @@ food: Pizza
            {% endfor %}
         });
 
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+
+
 
         function bbob(){
-            $("#crystal").text(Number($("#crystal").text())+3000);
-            $("#money").text(Number($("#money").text())+36000);
-            //뽑기 초기화
+            $("#crystal").text(numberWithCommas(Number($("#crystal").text().replaceAll("\,",""))+Number(3000)));
+            $("#money").text(numberWithCommas(Number($("#money").text().replaceAll("\,",""))+Number(36000)));
             var docDivBbob = document.getElementById("divBbob");
             while ( docDivBbob.hasChildNodes() ) {
                 docDivBbob.removeChild( docDivBbob.firstChild );
@@ -255,7 +260,7 @@ food: Pizza
                         }
                         //뽑기 내역 element 그리기
                         docCookie.classList.remove("invisible");
-                        docCookie.childNodes[1].childNodes[1].childNodes[3].childNodes[3].value=plus;
+                        docCookie.childNodes[1].childNodes[1].childNodes[3].childNodes[3].value="x"+plus;
                         //전체에 보유 영혼석 추가
                         docCookieCount.innerHTML = Number(docCookieCount.innerHTML)+plus;
                         docDivBbob.appendChild(docCookie);
