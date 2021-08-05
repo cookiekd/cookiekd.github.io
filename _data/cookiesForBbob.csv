@@ -1,6 +1,8 @@
 ﻿a,nameForHtml,nameForJs,id,img,color,grade
 a,퓨어바닐라맛 쿠키,"""퓨어바닐라맛 쿠키""",50,puva,CDBADF,0
 a,바다요정 쿠키,"""바다요정 쿠키""",51,bayo,CCDEDB,0
+a,오징어먹물맛 쿠키,"""오징어먹물맛 쿠키""",52,squid-cs,E8CECA,1
+a,샤벳상어맛 쿠키,"""샤벳상어맛 쿠키""",52,shark-cs,E8CECA,1
 a,감초맛 쿠키,"""감초맛 쿠키""",22,gamcho,E8CECA,1
 a,다크초코 쿠키,"""다크초코 쿠키""",23,dark,E8CECA,1
 a,뱀파이어 쿠키,"""뱀파이어 쿠키""",24,vam,E8CECA,1
